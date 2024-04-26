@@ -4,8 +4,7 @@
     "background_color": "#fff",
     "theme_color": "#fff",
     "display": "standalone",
-    "scope": "/mini-pwa/",
-    "start_url": "/mini-pwa/?source=pwa",
+    "scope": "/",
     "id": "03a25b2d-b372-4e5e-8daa-eb5012b66ac5",
     "icons": [
         {
