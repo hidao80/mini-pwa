@@ -7,6 +7,10 @@
 
 This project is a sample of a minimal Progressive Web App (PWA).
 
+## Operation example
+
+<https://hidao80.github.io/mini-pwa/>
+
 ## License
 
 MIT
