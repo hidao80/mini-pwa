@@ -2,8 +2,8 @@
  * Service Worker
  */
 const APP_NAME = "mini-pwa";
-const SUB_DIR = APP_NAME; // for GitHub Pages
-// const SUB_DIR = "";  // for localhost:8443 testing
+// const SUB_DIR = APP_NAME; // for GitHub Pages
+const SUB_DIR = "";  // for localhost:8443 testing
 const VERSION = "202404280744JST";
 const CACHE_NAME = APP_NAME + "_" + VERSION;
 
