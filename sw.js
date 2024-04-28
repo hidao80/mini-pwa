@@ -2,7 +2,7 @@
  * Service Worker
  */
 const APP_NAME = "mini-pwa";
-const SUB_DIR = APP_NAME;  // for GitHub Pages
+const SUB_DIR = APP_NAME; // for GitHub Pages
 // const SUB_DIR = "";  // for localhost:8443 testing
 const VERSION = "202404280744JST";
 const CACHE_NAME = APP_NAME + "_" + VERSION;
@@ -27,18 +27,18 @@ const assets = [
 console.debug(assets);
 
 // Install proccess
-self.addEventListener("install", e => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
+    caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(assets);
     })
   );
 });
 
 // Cache load processing when fetching resources
-self.addEventListener("fetch", e => {
+self.addEventListener("fetch", (e) => {
   e.respondWith(
-    caches.match(e.request).then(response => {
+    caches.match(e.request).then((response) => {
       return response ? response : fetch(e.request);
     })
   );
