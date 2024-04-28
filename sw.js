@@ -24,7 +24,6 @@ const assets = [
   // Image Files
   SUB_DIR + "/assets/images/icon256x256.png",
 ];
-console.debug(assets);
 
 // Install proccess
 self.addEventListener("install", (e) => {
@@ -40,6 +39,20 @@ self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
       return response ? response : fetch(e.request);
+    })
+  );
+});
+
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
     })
   );
 });
