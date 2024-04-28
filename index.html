@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="assets/icons/icon256x256.png">
+    <link rel="shortcut icon" type="image/png" href="assets/icons/icon256x256.png">
     <title>Minimum PWA</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <h1>Minimum PWA</h1>
-    <button id="install">Install</button>
     
     <!-- Generate UUID Form -->
     <input type="text" id="uuid" placeholder="UUID">
     <button type="button" id="generate">Generate</button>
 
     <!-- Service Worker -->
-    <script src="js/app.js"></script>
-    <script src="js/serviceWorker.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
 
