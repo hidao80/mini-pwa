@@ -2,26 +2,25 @@
  * Service Worker
  */
 const APP_NAME = "mini-pwa";
-const SUB_DIR = ".";
-const VERSION = "202404281245JST";
+const VERSION = "202404281814JST";
 const CACHE_NAME = APP_NAME + "_" + VERSION;
 
 // To publish on github pages, set appName to the subdirectory name.
 const assets = [
-  // Root
-  SUB_DIR + "/",
+  // Top URL
+  "/",
 
   // HTML Files
-  SUB_DIR + "/index.html",
+  "/index.html",
 
   // JavaScript Files
-  SUB_DIR + "/assets/js/app.js",
+  "/assets/js/app.js",
 
   // CSS Files
-  SUB_DIR + "/assets/css/app.css",
+  "/assets/css/app.css",
 
   // Image Files
-  SUB_DIR + "/assets/images/icon256x256.png",
+  "/assets/images/icon256x256.png",
 ];
 
 // Install proccess
