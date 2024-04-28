@@ -10,9 +10,9 @@ const CACHE_NAME = APP_NAME + "_" + VERSION;
 // jsファイルやcssファイル、画像ファイルなどがあればそれもリストアップしておくと良い
 // ここで言う"/"はサービスワーカーとなるJavaScriptファイルがあるディレクトリを指す
 const assets = [
-  "/",
-  "/index.html",
-  "/icon256x256.png",
+  "/mini-pwa/",
+  "/mini-pwa/index.html",
+  "/mini-pwa/icon256x256.png",
 ];
 
 /**
