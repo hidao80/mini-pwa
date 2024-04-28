@@ -16,13 +16,13 @@ const assets = [
   SUB_DIR + "/index.html",
 
   // JavaScript Files
-  SUB_DIR + "/js/app.js",
+  SUB_DIR + "/assets/js/app.js",
 
   // CSS Files
-  SUB_DIR + "/css/app.css",
+  SUB_DIR + "/assets/css/app.css",
 
   // Image Files
-  SUB_DIR + "/assets/icons/icon256x256.png",
+  SUB_DIR + "/assets/images/icon256x256.png",
 ];
 
 // Install proccess
