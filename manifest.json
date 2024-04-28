@@ -6,7 +6,7 @@
     "start_url": "/mini-pwa/index.html",
     "icons": [
         {
-            "src": "mini-pwa/icon256x256.png",
+            "src": "icon256x256.png",
             "type": "image/png",
             "sizes": "255x255"
         }
