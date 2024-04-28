@@ -28,6 +28,7 @@ const assets = [
 // Install proccess
 self.addEventListener("install", e => {
   e.waitUntil(
+    console.debug(assets);
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(assets);
     })
