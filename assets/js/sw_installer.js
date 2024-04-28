@@ -1,8 +1,8 @@
 /**
  * Service Worker Installer
  */
-export function install() {
+export function install(subDirectory = "") {
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js");
+    navigator.serviceWorker.register(subDirectory + "/sw.js");
   }  
 }
