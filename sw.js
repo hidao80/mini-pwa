@@ -29,12 +29,12 @@ self.addEventListener("install", (e) => {
 });
 
 /** 
- * サービスワーカーからダウンロードするときの処理
+ * サービスワーカーからサーバにアクセスするときの処理
  */
 self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
-      // キャッシュされているときは通信せずにローカルのファイルを利用する
+      // キャッシュされているときは通信せずにローカルのファイルを参照する
       return response ? response : fetch(e.request);
     })
   );
@@ -48,8 +48,9 @@ self.addEventListener("activate", (e) => {
     caches.keys().then((keyList) => {
       return Promise.all(
         keyList.map((key) => {
-          // もしこのファイルの先頭で定義されておらず、使われないファイルが
+          // このファイル先頭で定義されているファイル名の配列になく、
           // キャッシュされていたらキャッシュ（＝ローカル）から削除しておく
+          // バージョンアップ時にゴミが残らないようにする工夫
           if (key !== CACHE_NAME) {
             return caches.delete(key);
           }
