@@ -28,6 +28,18 @@
                 navigator.serviceWorker.register("./sw.js");
             }
         });
+        document.addEventListener("DOMContentLoaded", () => {
+            const docElement = document.documentElement;
+            if (docElement.requestFullscreen) {
+                docElement.requestFullscreen();
+            } else if (docElement.mozRequestFullScreen) {
+                docElement.mozRequestFullScreen();
+            } else if (docElement.webkitRequestFullscreen) {
+                docElement.webkitRequestFullscreen();
+            } else if (docElement.msRequestFullscreen) {
+                docElement.msRequestFullscreen();
+            }
+        });
     </script>
 </body>
 </html>
