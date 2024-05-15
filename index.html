@@ -23,11 +23,6 @@
 <body>
     <button type="button" onclick="alert('UUID: ' + crypto.randomUUID())">Generate</button>
     <script>
-        window.addEventListener("load", (e) => {
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("./sw.js");
-            }
-        });
         document.addEventListener("DOMContentLoaded", () => {
             const docElement = document.documentElement;
             if (docElement.requestFullscreen) {
@@ -38,6 +33,10 @@
                 docElement.webkitRequestFullscreen();
             } else if (docElement.msRequestFullscreen) {
                 docElement.msRequestFullscreen();
+            }
+
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("./sw.js");
             }
         });
     </script>
